@@ -17,12 +17,12 @@ string Uncommonchar(string A,string B){
     for(int i=0;i<B.length();i++)
         mB[B[i]]++;
     for(int i=0;i<A.length();i++){
-        if(mA.find(B[i])==mA.end()){
+        if(mA.find(A[i])!=mB.end()){
             s.insert(A[i]);
         }
     }
      for(int i=0;i<B.length();i++){
-        if(mB.find(A[i])==mB.end()){
+        if(mB.find(B[i])!=mA.end()){
             s.insert(B[i]);
         }
     }
